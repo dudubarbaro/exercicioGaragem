@@ -2,6 +2,7 @@ from django.db import models
 
 from models.cor import Cor
 from models.modelo import Modelo
+from uploader.models import Image
 
 
 class Veiculo(models.Model):
@@ -13,6 +14,14 @@ class Veiculo(models.Model):
     ano = models.IntegerField(null=True, blank=True)
     descricao = models.CharField(max_length=255, null=True, blank=True)
     preco = models.DecimalField(decimal_places=2, max_digits=5, null=True, blank=True)
+    imagem = models.ForeignKey(
+        Image,
+        related_name="+",
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+        default=None,
+    )
 
     def __str__(self):
         return f"{self.cor} ({self.modelo})"

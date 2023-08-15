@@ -1,11 +1,11 @@
 from django.contrib import admin
 
-from models.modelo import Modelo
-from models.veiculo import Veiculo
+from models.acessorio import Acessorio
 from models.categoria import Categoria
 from models.cor import Cor
-from models.acessorio import Acessorio
 from models.marca import Marca
+from models.modelo import Modelo
+from models.veiculo import Veiculo
 
 admin.site.register(Veiculo)
 admin.site.register(Modelo)
