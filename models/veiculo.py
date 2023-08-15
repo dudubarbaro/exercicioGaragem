@@ -24,7 +24,7 @@ class Veiculo(models.Model):
     )
 
     def __str__(self):
-        return f"{self.cor} ({self.modelo})"
+        return f"{self.ano} ({self.descricao})"
 
     class Meta:
         verbose_name = "Veiculo"

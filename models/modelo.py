@@ -13,7 +13,7 @@ class Modelo(models.Model):
     nome = models.CharField(max_length=255, null=True, blank=True)
 
     def __str__(self):
-        return f"{self.categoria} ({self.marca})"
+        return f"{self.marca} ({self.nome})"
 
     class Meta:
         verbose_name = "Modelo"
