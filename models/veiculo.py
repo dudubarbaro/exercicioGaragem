@@ -21,7 +21,7 @@ class Veiculo(models.Model):
     imagem = models.ManyToManyField(Image)
 
     def __str__(self):
-        return f"{self.ano} ({self.descricao})"
+        return f"{self.modelo} ({self.ano})"
 
     class Meta:
         verbose_name = "Veiculo"
