@@ -13,8 +13,23 @@ class VeiculoSerializer(ModelSerializer):
         required=False,
         write_only=True,
     )
-    imagem = ImageSerializer(required=False, read_only=True)
+    imagemCar = ImageSerializer(required=False, read_only=True)
 
     class Meta:
         model = Veiculo
         fields = "__all__"
+
+
+class VeiculoListSerializer(ModelSerializer):
+    class Meta:
+        model = Veiculo
+        fields = ["id", "modelo", "ano"]
+
+
+class VeiculoDetailSerializer(ModelSerializer):
+    imagemCar = ImageSerializer(required=False)
+
+    class Meta:
+        model = Veiculo
+        fields = "__all__"
+        depth = 1

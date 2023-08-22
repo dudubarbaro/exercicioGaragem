@@ -16,7 +16,7 @@ class Veiculo(models.Model):
     ano = models.IntegerField(null=True, blank=True)
     descricao = models.CharField(max_length=255, null=True, blank=True)
     preco = models.DecimalField(
-        decimal_places=2, max_digits=5, null=True, blank=True
+        decimal_places=3, max_digits=6, null=True, blank=True
     )
     imagem = models.ManyToManyField(Image)
 
